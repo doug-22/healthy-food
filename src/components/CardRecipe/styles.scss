@@ -1,0 +1,41 @@
+.container-card-recipe {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: var(--white);
+
+  border-radius: 10px;
+  box-shadow: 10px 5px 10px var(--gray);
+
+  .image-recipe {
+    width: 50%;
+    border-radius: 10px 0 0 10px;
+  }
+  .content-info {
+    h3 {
+      color: var(--dark-blue);
+    }
+    button {
+      background-color: var(--button);
+      color: var(--white);
+      font-size: 12px;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 5px;
+
+      &:hover {
+        background-color: var(--button-hover);
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .container-card-recipe {
+    width: 400px;
+  }
+  h3 {
+    width: 160px;
+  }
+}
