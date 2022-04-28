@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  --button: #badc58;
+  --button-hover: #a0bd4a;
+  --gray: #e7e7e7;
+  --white: #ffffff;
+}
