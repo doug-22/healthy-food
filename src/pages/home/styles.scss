@@ -67,12 +67,11 @@
     color: var(--dark-blue);
   }
 
-  span {
-    width: 350px;
+  p {
+    width: 450px;
     text-align: center;
-    font-size: 10px;
     color: var(--dark-gray);
-    line-height: 20px;
+    line-height: 30px;
   }
 
   .content-cards-recipes {
@@ -81,6 +80,49 @@
     align-items: center;
     gap: 20px;
     margin-top: 20px;
+  }
+}
+
+.container-service {
+  display: flex;
+  position: relative;
+
+  .image-service {
+    width: 100%;
+  }
+  
+  .content-service {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(255,255,255,0.5);
+    padding: 10px;
+    border-radius: 10px;
+
+    h2 {
+      color: var(--dark-blue);
+      text-align: center;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    button {
+      background-color: var(--button);
+      color: var(--white);
+      font-size: 12px;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 5px;
+      box-shadow: 0 3px 5px var(--button-hover);
+
+      &:hover {
+        background-color: var(--button-hover);
+      }
+    }
   }
 }
 
@@ -111,6 +153,31 @@
       width: 60%;
     }
   }
+
+  .container-service {
+    position: initial;
+    justify-content: space-between;
+    align-items: center;
+
+    .image-service {
+      width: 60%;
+    }
+
+    .content-service {
+      position: initial;
+      transform: none;
+      padding-right: 20px;
+    }
+
+    h2 {
+      text-align: left !important;
+    }
+
+    p {
+      text-align: left !important;
+      color: var(--dark-gray);
+    }
+  }
 }
 
 @media (min-width: 800px) {
@@ -123,12 +190,30 @@
 }
 
 @media (min-width: 1000px) {
-  p {
-    width: 250px !important;
-    font-size: 40px !important;
+  .content-search {
+    p {
+      width: 250px !important;
+      font-size: 40px !important;
+    }
+  
+    .input {
+      width: 250px !important;
+    }
   }
 
-  .input {
-    width: 250px !important;
+  .content-service {
+    width: 100% !important;
+
+    h2 {
+      width: 80%;
+    }
+
+    p {
+      width: 80%;
+    }
+    button {
+      padding: 15px 20px !important;
+      font-size: 15px !important;
+    }
   }
 }
