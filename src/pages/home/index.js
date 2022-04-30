@@ -1,15 +1,16 @@
 import React from "react";
 import { BiSearch } from "react-icons/bi";
 
-import featuredImage from "../../assets/Illustration.svg";
 import CardRecipe from "../../components/CardRecipe";
 
 import "./styles.scss";
+import featuredImage from "../../assets/Illustration.svg";
 import Food_1 from "../../assets/comida_1.svg";
 import Food_2 from "../../assets/comida_2.svg";
 import Food_3 from "../../assets/comida_3.svg";
 import Food_4 from "../../assets/comida_4.svg";
 import Services from "../../assets/bloco_services.svg";
+import Slider from "../../components/SliderBlog";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         </div>
         <img className="image-featured" src={featuredImage} alt=""/>
       </section>
+
       <section className="container-recipes">
         <h2>Our Best Recipes</h2>
         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
@@ -36,6 +38,7 @@ export default function Home() {
           <CardRecipe image={Food_4} title={"Cherry Cobbler on the Grill"} />
         </div>
       </section>
+
       <section className="container-service">
         <img className="image-service" src={Services} alt="" />
         <div className="content-service">
@@ -60,6 +63,14 @@ export default function Home() {
           </p>
           <br/>
           <button>Know More</button>
+        </div>
+      </section>
+      
+      <section className="container-blog">
+        <h2>Read Our Blog</h2>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <div className="content-slider">
+          <Slider />
         </div>
       </section>
     </>

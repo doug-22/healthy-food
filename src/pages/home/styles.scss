@@ -68,7 +68,7 @@
   }
 
   p {
-    width: 450px;
+    width: 80%;
     text-align: center;
     color: var(--dark-gray);
     line-height: 30px;
@@ -124,6 +124,32 @@
       }
     }
   }
+}
+
+.container-blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white02);
+  padding: 50px 0 30px;
+
+  h2 {
+    color: var(--dark-blue);
+  }
+
+  p {
+    width: 80%;
+    text-align: center;
+    color: var(--dark-gray);
+    line-height: 30px;
+  }
+
+  .content-slider {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
 }
 
 @media (min-width: 640px) {
@@ -186,6 +212,18 @@
     flex-direction: initial !important;
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  .container-recipes {
+    p {
+      width: 450px !important;
+    }
+  }
+
+  .container-blog {
+    p {
+      width: 450px !important;
+    }
   }
 }
 
