@@ -11,6 +11,15 @@
   top: 0;
   right: 0;
   left: 0;
+
+  transition: all ease 0.5s;
+}
+
+.green {
+  background-color: var(--header);
+  .title {
+    color: var(--white);
+  }
 }
 
 .title {

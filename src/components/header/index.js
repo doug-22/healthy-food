@@ -4,13 +4,13 @@ import UseMedia from "../hooks/useMedia";
 
 import "./styles.scss";
 
-export default function Header() {
+export default function Header({green}) {
 
   const [open, setOpen] = useState(false);
   const mobile = UseMedia('(max-width: 40rem)');
 
   return (
-    <header className="container-header">
+    <header className={`container-header ${green && 'green'}`}>
       <a href="#/"><h2 className="title">Healthy Food</h2></a>
 
       {mobile && (
