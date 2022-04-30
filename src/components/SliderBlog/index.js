@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
-import useMedia from "../hooks/useMedia";
+import useMedia from "../Hooks/useMedia";
 
 import CardBlog from "../CardBlog";
 

@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from "react";
 import "./global.scss";
 
-import Header from "./components/header";
-import Home from "./pages/home";
+import Header from "./components/Header";
+import Home from "./pages/Home";
 import Footer from "./components/Footer";
 
 export default function App() {

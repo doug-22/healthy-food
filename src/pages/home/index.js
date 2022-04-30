@@ -16,7 +16,7 @@ import finalImage from "../../assets/bloco_final_image.svg";
 export default function Home() {
   return (
     <>
-      <section className="container-featured">
+      <section id="featured" className="container-featured">
         <div className="content-search">
           <p>
             Ready for Trying a new recipe?
@@ -29,7 +29,7 @@ export default function Home() {
         <img className="image-featured" src={featuredImage} alt=""/>
       </section>
 
-      <section className="container-recipes">
+      <section id="recipes" className="container-recipes">
         <h2>Our Best Recipes</h2>
         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
         <div className="content-cards-recipes">
@@ -67,7 +67,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container-blog">
+      <section id="blog" className="container-blog">
         <h2>Read Our Blog</h2>
         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
         <div className="content-slider">
@@ -75,7 +75,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container-join">
+      <section id="join" className="container-join">
         <div className="content-search">
           <p>
           Join our membership to get special offer
