@@ -2,6 +2,7 @@ import React from "react";
 import { BiSearch } from "react-icons/bi";
 
 import CardRecipe from "../../components/CardRecipe";
+import Slider from "../../components/SliderBlog";
 
 import "./styles.scss";
 import featuredImage from "../../assets/Illustration.svg";
@@ -10,7 +11,7 @@ import Food_2 from "../../assets/comida_2.svg";
 import Food_3 from "../../assets/comida_3.svg";
 import Food_4 from "../../assets/comida_4.svg";
 import Services from "../../assets/bloco_services.svg";
-import Slider from "../../components/SliderBlog";
+import finalImage from "../../assets/bloco_final_image.svg";
 
 export default function Home() {
   return (
@@ -65,13 +66,26 @@ export default function Home() {
           <button>Know More</button>
         </div>
       </section>
-      
+
       <section className="container-blog">
         <h2>Read Our Blog</h2>
         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
         <div className="content-slider">
           <Slider />
         </div>
+      </section>
+
+      <section className="container-join">
+        <div className="content-search">
+          <p>
+          Join our membership to get special offer
+          </p>
+          <form className="form">
+            <input className="input" placeholder="Enter your email address"/>
+            <button className="button-join">Join</button>
+          </form>
+        </div>
+        <img className="image-join" src={finalImage} alt=""/>
       </section>
     </>
   );
