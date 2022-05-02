@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from "react";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
 import "./global.scss";
 
 import Header from "./components/Header";
 import Home from "./pages/Home";
+import Register from "./pages/Register";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -25,10 +27,13 @@ export default function App() {
   }, []);
   
   return (
-    <>
+    <BrowserRouter>
       <Header green={greenHeader} />
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }

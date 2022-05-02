@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link  } from "react-router-dom";
 
 import UseMedia from "../Hooks/useMedia";
 
@@ -26,7 +27,7 @@ export default function Header({green}) {
           <li><a href="#recipes" className="nav-button">HEALTHY RECIPES</a></li>
           <li><a href="#blog" className="nav-button">BLOG</a></li>
           <li><a href="#join" className="nav-button">JOIN</a></li>
-          <li><button className='login-button'>REGISTER</button></li>
+          <li><Link to="/register"><button className='login-button'>REGISTER</button></Link></li>
         </ul>
       </nav>
     </header>
