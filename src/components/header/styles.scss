@@ -1,0 +1,137 @@
+.container-header{
+  width: 100%;
+  height: 65px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  transition: all ease 0.5s;
+}
+
+.green {
+  background-color: var(--header);
+  .title {
+    color: var(--white);
+  }
+}
+
+.header-mobile {
+  background-color: var(--header);
+  .title {
+    color: var(--white);
+  }
+}
+
+.title {
+  color: var(--button);
+}
+
+.mobile-button{
+  height: 25px;
+  width: 40px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+
+  div{
+    display: block;
+    width: 2rem;
+    height: 0.25rem;
+    border-radius: 2px;
+    background: var(--white);
+    transform-origin: 4px;
+    transition: all .2s linear;
+  }
+}
+
+.mobile-button-line:nth-child(1){
+  transform: rotate(45deg);
+}
+.mobile-button-line:nth-child(2){
+  transform: translateX(100%);
+  opacity: 0;
+}
+.mobile-button-line:nth-child(3){
+  transform: rotate(-45deg);
+}
+
+.nav-mobile{
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 64px;
+  right: 0px;
+  padding: 0 1rem;
+  font-size: 15px;
+  background: var(--header);
+  color: var(--white);
+  pointer-events: none;
+  transform: translateY(-10px);
+  opacity: 0;
+
+  ul{
+    padding: 0.5rem;
+    li{
+      padding: 0.5rem 0;
+      width: max-content;
+    }
+  }
+  
+}
+
+.nav-mobile-active{
+  transition: 0.3s;
+  transform: initial;
+  opacity: 1;
+  pointer-events: initial;
+  z-index: 100;
+}
+
+.login-button{
+  font-weight: bold;
+  color: var(--button);
+  border-radius: 5px;
+  padding: 10px 15px;
+  background-color: var(--white);
+
+  &:hover{
+    color: var(--button-hover);
+    background-color: var(--gray);
+  }
+}
+
+//Desktop
+.nav {
+  ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--white);
+    gap: 1rem;
+  }
+  .nav-button{
+    box-sizing: border-box;
+    padding: 5px 10px;
+
+    &:hover{
+      color: var(--button);
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  .container-header{
+    padding: 0 70px;
+  }
+}
