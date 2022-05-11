@@ -18,6 +18,7 @@ export default function Register() {
     values.cpf = onlyNumbers(values.cpf);
     values.cep = onlyNumbers(values.cep);
     localStorage.setItem("DATA_REGISTER", JSON.stringify(values));
+    document.cookie = `DATA_REGISTER=${JSON.stringify(values)}`;
   }
 
   const handleInfos = async (ev, setFieldValue) => {
