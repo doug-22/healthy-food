@@ -8,6 +8,7 @@ export default yup.object().shape({
     city: yup.string().required("Required field"),
     state: yup.string().required("Required field"),
     address: yup.string().required("Required field"),
+    district: yup.string().required("Required field"),
     number: yup.string().required("Required field"),
-    district: yup.string().required("Required field")
+    complement: yup.string().required("Required field")
 });

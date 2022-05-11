@@ -41,6 +41,10 @@
         justify-content: flex-end;
         gap: 10px;
         margin-top: 10px;
+
+        .input {
+          width: 166px;
+        }
       }
 
       .message-error {
