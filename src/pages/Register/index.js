@@ -17,7 +17,7 @@ export default function Register() {
   const handleSubmit = async (values) => {
     values.cpf = onlyNumbers(values.cpf);
     values.cep = onlyNumbers(values.cep);
-    console.log(values);
+    localStorage.setItem("DATA_REGISTER", JSON.stringify(values));
   }
 
   const handleInfos = async (ev, setFieldValue) => {
@@ -40,7 +40,8 @@ export default function Register() {
     state: "",
     address: "",
     number: "",
-    district: ""
+    district: "",
+    complement: ""
   };
 
   return (
