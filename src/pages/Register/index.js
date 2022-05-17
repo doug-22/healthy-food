@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, ErrorMessage, Form as FormFormik, Field } from "formik";
 import InputMask from "react-input-mask";
 import api from "../../services/api";
 import schema from "./schema";
+import Modal from "../../components/Modal";
 
 import DatePicker from "react-datepicker";
 
@@ -14,11 +15,14 @@ const onlyNumbers = (str) => str.replace(/[^0-9]/g, '');
 
 export default function Register() {
 
+  const [modalVisible, setModalVisible] = useState(false);
+
   const handleSubmit = async (values) => {
     values.cpf = onlyNumbers(values.cpf);
     values.cep = onlyNumbers(values.cep);
     localStorage.setItem("DATA_REGISTER", JSON.stringify(values));
     document.cookie = `DATA_REGISTER=${JSON.stringify(values)}`;
+    setModalVisible(true);
   }
 
   const handleInfos = async (ev, setFieldValue) => {
@@ -182,6 +186,7 @@ export default function Register() {
 
         </Formik>
       </div>
+      {modalVisible ? <Modal onClose={() => setModalVisible(false)}/> : null}
     </section>
   );
 }
