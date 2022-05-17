@@ -10,5 +10,5 @@ export default yup.object().shape({
     address: yup.string().required("Required field"),
     district: yup.string().required("Required field"),
     number: yup.string().required("Required field"),
-    complement: yup.string().required("Required field")
+    complement: yup.string()
 });
